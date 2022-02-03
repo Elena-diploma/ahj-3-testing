@@ -67,11 +67,11 @@ a.btn.btn-success:hover {
 }
 
 .card.discover {
-  background-image: url(src/img/discover.png);
+  background-image: url(../img/discover.png);
 }
 
 .card.diners {
-  background-image: url(src/img/diners-club.png);
+  background-image: url(../img/diners-club.png);
 }
 
 .card.mir {
