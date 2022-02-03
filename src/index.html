@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Card validator</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Credit Card Validator</title>
 </head>
-
 <body>
-<div id="widget-container"></div>
+<div class="main-container">
+  <div class="image-container">
+    <img src="../src/img/visa.png" class="card card-visa" alt="visa-icon">
+    <img src="../src/img/mastercard.png" class="card card-master" alt="mastercard-icon">
+    <img src="../src/img/american-express.png" class="card card-american" alt="american-express-icon">
+    <img src="../src/img/discover.png" class="card card-discover" alt="discover-icon">
+    <img src="../src/img/diners-club.png" class="card card-diners" alt="diners-icon">
+    <img src="../src/img/mir.png" class="card card-mir" alt="mir-icon">
+  </div>
+  <form data-widget="card-num-form-widget">
+    <div class="form-control">
+      <label for="card-num" class="hidden">Введите номер карты</label>
+      <input id="card-num" data-id="card-num-input" type="text" name="card-number">
+    </div>
+    <button data-id="card-num-submit" id="submitform">Click to Validate</button>
+  </form>
+  <p class="message hidden">Card number is not correct</p>
+</div>
 </body>
 </html>

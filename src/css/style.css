@@ -1,98 +1,57 @@
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Arial, sans-serif;
 
-  color: #333333;
+}
+.hidden {
+  display: none;
 }
 
-h3 {
-  width: max-content;
-  margin-top: 25px;
-
-  font-size: 1.3em;
-}
-
-.cards {
-  width: max-content;
-  height: 25px;
-  margin: 10px 0;
-}
-
-.cards li {
-  display: block;
-  float: left;
+.image-container {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  margin-bottom: 10px;
 }
 
 .card {
-  float: left;
-  width: 39px;
-  height: 25px;
-  margin-right: 4px;
-
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
-  border: 0;
-
-  text-indent: -9999px;
+  width: 48px;
+  height: 48px;
+  filter: grayscale(100%);
 }
 
-.form-control {
-  max-width: 240px;
+.card-active {
+  filter: none;
 }
 
-a.btn.btn-success {
+.main-container {
+  margin: 50px auto;
+  width: 340px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+#card-num {
+  width: 200px;
+  height: 31px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+}
+
+button {
+  color: #fff;
+  background-color: #5EB462;
+  border: 1px solid #5EB462;
+  border-radius: 4px;
+  width: 130px;
+  box-sizing: border-box;
+  padding: 7px;
   margin-left: 10px;
-
-  color: #ffffff;
-}
-
-a.btn.btn-success:hover {
-  color: #ffffff;
-}
-
-.disabled {
-  filter: opacity(0.5) grayscale(1);
-}
-
-.card.visa {
-  background-image: url(../img/visa.png);
-}
-
-.card.american-express {
-  background-image: url(../img/american-express.png);
-}
-
-.card.mastercard {
-  background-image: url(../img/mastercard.png);
-}
-
-.card.discover {
-  background-image: url(../img/discover.png);
-}
-
-.card.diners {
-  background-image: url(../img/diners-club.png);
-}
-
-.card.mir {
-  background-image: url(../img/mir.png);
-}
-
-.invalid {
-  background-color: #ffdddd;
-}
-
-.valid {
-  background-color: #ddffdd;
-}
-
-@media (max-width: 600px) {
-  .form-group {
-    width: 320px;
-  }
-
-  a.btn.btn-success {
-    margin-top: 10px;
-    margin-left: 0;
-  }
 }

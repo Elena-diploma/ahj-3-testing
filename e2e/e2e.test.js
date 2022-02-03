@@ -33,7 +33,21 @@ describe('Credit Card Validator form', () => {
     server.kill();
   });
 
-  test('should add do something', async () => {
+  test('should add "valid" class for valid input', async () => {
     await page.goto(baseUrl);
+    const input = await page.$('#card-num');
+    const submit = await page.$('#submitform');
+    await input.type('4388529697885');
+    submit.click();
+    await page.waitForSelector('.valid');
+  });
+
+  test('should add "invalid" class for invalid input', async () => {
+    await page.goto(baseUrl);
+    const input = await page.$('#card-num');
+    const submit = await page.$('#submitform');
+    await input.type('1111111111111111');
+    submit.click();
+    await page.waitForSelector('.invalid');
   });
 });
