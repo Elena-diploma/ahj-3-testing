@@ -1,10 +1,8 @@
 import cardsData from '../cardsData';
 import CardDataParser from '../CardDataParser';
-import CardIdentifier from '../CardIdentifier';
+import Widget from '../Widget';
 
-const checkParameters = CardDataParser.getCheckParameters(cardsData);
 const biggestFirstDigits = CardDataParser.getBiggestFirstDigits(cardsData);
-const cardIdentifier = new CardIdentifier(checkParameters, biggestFirstDigits);
 
 test.each([
   ['visa', '4929348827706170', 'visa'],
@@ -17,10 +15,9 @@ test.each([
   expect(biggestFirstDigits(input)).toBe(expected);
 });
 
-test('class "CardIdentifier" handles invalid input correctly', () => {
-  let result = cardIdentifier.identifyCard('1111111111111111');
-  expect(result).toBeUndefined();
-
-  result = cardIdentifier.identifyCard('6388744863839090');
-  expect(result).toBeUndefined();
+test.each([
+  ['true for valid num', '4929348827706170', true],
+  ['false for invalid num', '5121849023100', false],
+])(('it should be %s'), (_, input, expected) => {
+  expect(Widget(input)).toBe(expected);
 });
