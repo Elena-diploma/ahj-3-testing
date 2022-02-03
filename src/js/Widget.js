@@ -13,7 +13,7 @@ export default class Widget {
           <li><span class="card mastercard" title="Mastercard">Mastercard</span></li>
           <li><span class="card american-express" title="American Express">American Express</span></li>
           <li><span class="card discover" title="Discover">Discover</span></li>
-          <li><span class="card diners" title="Diners Club">Diners Club</span></li>
+          <li><span class="card diners" title="Diners">Diners Club</span></li>
           <li><span class="card mir" title="Mir">Mir</span></li>
         </ul>
         <form id="form" class="form-inline" novalidate="novalidate">
